@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Branding Website - Web Developer & Digital Creator">
+    <title>Your Name - Web Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">YourName</a>
+                
+                <div class="nav-links">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <span class="sun-icon">☀️</span>
+                        <span class="moon-icon">🌙</span>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-subtitle fade-in">Hello, I'm</p>
+                <h1 class="hero-title fade-in">Your Full Name</h1>
+                <p class="hero-role fade-in">Web Developer & Digital Creator</p>
+                <p class="hero-tagline fade-in">Crafting digital experiences with clean code and creative solutions</p>
+                
+                <div class="hero-buttons fade-in">
+                    <a href="#contact" class="btn btn-primary">Hire Me</a>
+                    <a href="#projects" class="btn btn-secondary">View Work</a>
+                </div>
+                
+                <div class="hero-social fade-in">
+                    <a href="https://github.com/yourusername" target="_blank" class="social-link" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/yourusername" target="_blank" class="social-link" aria-label="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Get To Know</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Halo! Saya adalah seorang Web Developer yang passionate dalam menciptakan solusi digital yang efektif dan efisien. 
+                        Dengan pengalaman dalam mengembangkan berbagai jenis website dan aplikasi, saya selalu berusaha menghadirkan hasil terbaik untuk setiap project.
+                    </p>
+                    
+                    <p>
+                        Saya memulai perjalanan di dunia teknologi sejak [tahun], dan sejak itu saya terus belajar dan berkembang. 
+                        Ketertarikan saya pada web development dimulai dari rasa ingin tahu bagaimana website dan aplikasi bekerja di balik layar.
+                    </p>
+                    
+                    <p>
+                        Saya percaya bahwa setiap project adalah kesempatan untuk belajar hal baru dan memberikan value lebih. 
+                        Fokus saya adalah membangun website yang tidak hanya terlihat menarik, tetapi juga fungsional, cepat, dan user-friendly.
+                    </p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-number">3+</div>
+                            <div class="highlight-label">Years Experience</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number">20+</div>
+                            <div class="highlight-label">Projects Completed</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number">15+</div>
+                            <div class="highlight-label">Happy Clients</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What I Can Do</span>
+                <h2 class="section-title">Skills & Abilities</h2>
+            </div>
+            
+            <div class="skills-content">
+                <!-- Technical Skills -->
+                <div class="skills-category">
+                    <h3 class="skills-category-title">Technical Skills</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML & CSS</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">PHP & Laravel</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">MySQL Database</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Git & Version Control</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div class="skills-category">
+                    <h3 class="skills-category-title">Soft Skills</h3>
+                    
+                    <div class="soft-skills-grid">
+                        <div class="soft-skill-card">
+                            <div class="soft-skill-icon">💡</div>
+                            <h4>Problem Solving</h4>
+                            <p>Analisis masalah dan menemukan solusi efektif</p>
+                        </div>
+                        
+                        <div class="soft-skill-card">
+                            <div class="soft-skill-icon">🤝</div>
+                            <h4>Communication</h4>
+                            <p>Komunikasi jelas dengan tim dan client</p>
+                        </div>
+                        
+                        <div class="soft-skill-card">
+                            <div class="soft-skill-icon">📚</div>
+                            <h4>Fast Learner</h4>
+                            <p>Cepat belajar teknologi dan tools baru</p>
+                        </div>
+                        
+                        <div class="soft-skill-card">
+                            <div class="soft-skill-icon">⏰</div>
+                            <h4>Time Management</h4>
+                            <p>Mengelola waktu dan prioritas dengan baik</p>
+                        </div>
+                        
+                        <div class="soft-skill-card">
+                            <div class="soft-skill-icon">🎯</div>
+                            <h4>Attention to Detail</h4>
+                            <p>Teliti dan fokus pada kualitas</p>
+                        </div>
+                        
+                        <div class="soft-skill-card">
+                            <div class="soft-skill-icon">🔄</div>
+                            <h4>Consistency</h4>
+                            <p>Konsisten dalam belajar dan bekerja</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My Work</span>
+                <h2 class="section-title">Experience & Projects</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">Project Image</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-Commerce Website</h3>
+                        <p class="project-description">
+                            Membangun platform e-commerce lengkap dengan sistem pembayaran, manajemen produk, dan admin dashboard. 
+                            Menggunakan Laravel dan MySQL untuk backend.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">Project Image</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Company Profile Website</h3>
+                        <p class="project-description">
+                            Website company profile modern dan responsive untuk perusahaan lokal. 
+                            Fokus pada desain clean dan user experience yang optimal.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">Project Image</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Inventory Management System</h3>
+                        <p class="project-description">
+                            Sistem manajemen inventori untuk memudahkan tracking stok barang, laporan, dan analisis data. 
+                            Dilengkapi dengan fitur export data.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">jQuery</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">Project Image</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Landing Page Portfolio</h3>
+                        <p class="project-description">
+                            Landing page portfolio pribadi dengan desain modern dan animasi smooth. 
+                            Fully responsive untuk semua device.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Animations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (Optional) -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What I Offer</span>
+                <h2 class="section-title">Services</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-description">
+                        Membangun website custom sesuai kebutuhan bisnis Anda dengan teknologi modern dan performa optimal.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3 class="service-title">Website Maintenance</h3>
+                    <p class="service-description">
+                        Layanan maintenance dan update website untuk memastikan website selalu berjalan dengan baik.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3 class="service-title">Simple System Development</h3>
+                    <p class="service-description">
+                        Pengembangan sistem sederhana seperti inventory, absensi, atau sistem manajemen data lainnya.
+                    </p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3 class="service-title">UI/UX Design</h3>
+                    <p class="service-description">
+                        Desain interface yang menarik dan user-friendly untuk meningkatkan user experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-intro">
+                        Tertarik untuk bekerja sama atau punya project yang ingin didiskusikan? 
+                        Jangan ragu untuk menghubungi saya!
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-method-icon">📧</div>
+                            <div class="contact-method-content">
+                                <h4>Email</h4>
+                                <a href="mailto:youremail@example.com">youremail@example.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-method-icon">📱</div>
+                            <div class="contact-method-content">
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/628123456789" target="_blank">+62 812-3456-789</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-method-icon">🔗</div>
+                            <div class="contact-method-content">
+                                <h4>Social Media</h4>
+                                <div class="social-links-list">
+                                    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                                    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+                                    <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Your Name. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">GitHub</a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
