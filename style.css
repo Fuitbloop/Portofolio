@@ -439,8 +439,8 @@ section {
    ============================================ */
 .skills-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
 }
 
 .skills-category-title {
@@ -488,7 +488,7 @@ section {
 /* Soft Skills - Cards */
 .soft-skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: var(--spacing-md);
 }
 
@@ -697,6 +697,7 @@ section {
 .social-links-list {
     display: flex;
     gap: var(--spacing-sm);
+    flex-wrap: wrap;
 }
 
 /* Contact Form */
@@ -773,6 +774,7 @@ section {
 .footer-social {
     display: flex;
     gap: var(--spacing-md);
+    flex-wrap: wrap;
 }
 
 .footer-social a {
@@ -823,9 +825,42 @@ section {
 }
 
 /* ============================================
-   Responsive Design
+   Responsive Design - Tablet
+   ============================================ */
+@media (max-width: 1024px) {
+    :root {
+        --spacing-lg: 3rem;
+        --spacing-xl: 4rem;
+    }
+    
+    .skills-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .soft-skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   Responsive Design - Mobile
    ============================================ */
 @media (max-width: 768px) {
+    :root {
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2.5rem;
+        --spacing-xl: 3rem;
+    }
+    
     /* Navigation */
     .nav-links {
         position: fixed;
@@ -839,6 +874,7 @@ section {
         transform: translateY(-100%);
         opacity: 0;
         transition: transform var(--transition-normal), opacity var(--transition-normal);
+        gap: var(--spacing-sm);
     }
     
     .nav-links.active {
@@ -864,15 +900,18 @@ section {
     
     /* Hero */
     .hero {
+        min-height: 90vh;
         padding: var(--spacing-lg) 0;
     }
     
     .hero-buttons {
         flex-direction: column;
+        align-items: center;
     }
     
     .btn {
         width: 100%;
+        max-width: 300px;
         text-align: center;
     }
     
@@ -881,17 +920,140 @@ section {
         padding: var(--spacing-lg) 0;
     }
     
+    .section-title {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+    }
+    
     /* Grids */
-    .skills-content,
-    .projects-grid,
-    .services-grid,
+    .skills-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .soft-skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .contact-content {
         grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    /* About */
+    .about-highlights {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .highlight-item {
+        padding: var(--spacing-sm);
+    }
+    
+    .highlight-number {
+        font-size: 2rem;
     }
     
     /* Footer */
     .footer-content {
         flex-direction: column;
         text-align: center;
+        gap: var(--spacing-sm);
+    }
+}
+
+/* ============================================
+   Responsive Design - Small Mobile
+   ============================================ */
+@media (max-width: 480px) {
+    :root {
+        --spacing-md: 1rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 2.5rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .logo {
+        font-size: 1.25rem;
+    }
+    
+    .hero-title {
+        font-size: clamp(2.5rem, 7vw, 3.5rem);
+    }
+    
+    .hero-role {
+        font-size: clamp(1.1rem, 3vw, 1.4rem);
+    }
+    
+    .hero-tagline {
+        font-size: 1rem;
+    }
+    
+    .soft-skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-highlights {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .highlight-number {
+        font-size: 1.75rem;
+    }
+    
+    .highlight-label {
+        font-size: 0.85rem;
+    }
+    
+    .skill-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    
+    .skill-percentage {
+        align-self: flex-end;
+    }
+    
+    .contact-method {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .contact-method-icon {
+        margin-bottom: var(--spacing-sm);
+    }
+}
+
+/* ============================================
+   Responsive Design - Landscape Mode
+   ============================================ */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-role {
+        font-size: 1.5rem;
+    }
+    
+    .hero-buttons {
+        margin-bottom: var(--spacing-md);
     }
 }
