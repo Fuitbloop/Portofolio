@@ -14,152 +14,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="project-card.css">
-    
-    <style>
-        /* Responsive Mobile Navbar Styles */
-        @media (max-width: 768px) {
-            /* Mobile Menu Button Animation */
-            .mobile-menu-btn {
-                display: flex !important;
-                flex-direction: column;
-                justify-content: space-between;
-                width: 30px;
-                height: 24px;
-                background: transparent;
-                border: none;
-                cursor: pointer;
-                padding: 0;
-                z-index: 1001;
-                position: relative;
-            }
-            
-            .mobile-menu-btn span {
-                display: block;
-                width: 100%;
-                height: 3px;
-                background-color: var(--text-color);
-                border-radius: 2px;
-                transition: all 0.3s ease;
-                transform-origin: center;
-            }
-            
-            .mobile-menu-btn.active span:nth-child(1) {
-                transform: translateY(10.5px) rotate(45deg);
-            }
-            
-            .mobile-menu-btn.active span:nth-child(2) {
-                opacity: 0;
-                transform: scaleX(0);
-            }
-            
-            .mobile-menu-btn.active span:nth-child(3) {
-                transform: translateY(-10.5px) rotate(-45deg);
-            }
-            
-            /* Nav Links Mobile */
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                max-width: 300px;
-                height: 100vh;
-                background-color: var(--surface-color);
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-                flex-direction: column;
-                padding: 80px 30px 30px;
-                transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                z-index: 1000;
-                box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
-                overflow-y: auto;
-            }
-            
-            .nav-links.active {
-                right: 0;
-            }
-            
-            .nav-link {
-                padding: 15px 0;
-                font-size: 1.1rem;
-                border-bottom: 1px solid rgba(var(--text-color-rgb), 0.1);
-                width: 100%;
-                opacity: 0;
-                transform: translateX(20px);
-                transition: opacity 0.3s ease, transform 0.3s ease;
-            }
-            
-            .nav-links.active .nav-link {
-                opacity: 1;
-                transform: translateX(0);
-            }
-            
-            .nav-links.active .nav-link:nth-child(1) { transition-delay: 0.1s; }
-            .nav-links.active .nav-link:nth-child(2) { transition-delay: 0.15s; }
-            .nav-links.active .nav-link:nth-child(3) { transition-delay: 0.2s; }
-            .nav-links.active .nav-link:nth-child(4) { transition-delay: 0.25s; }
-            .nav-links.active .nav-link:nth-child(5) { transition-delay: 0.3s; }
-            
-            .theme-toggle {
-                margin-top: 30px;
-                padding: 15px;
-                justify-content: center;
-                border-radius: 12px;
-                background: var(--card-bg);
-                opacity: 0;
-                transform: translateX(20px);
-                transition: opacity 0.3s ease, transform 0.3s ease;
-            }
-            
-            .nav-links.active .theme-toggle {
-                opacity: 1;
-                transform: translateX(0);
-                transition-delay: 0.35s;
-            }
-            
-            /* Overlay */
-            .nav-overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
-                backdrop-filter: blur(3px);
-                -webkit-backdrop-filter: blur(3px);
-                z-index: 999;
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity 0.3s ease, visibility 0.3s ease;
-            }
-            
-            .nav-overlay.active {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-        
-        /* Existing Navbar Styles (ensure mobile menu button is hidden by default) */
-        .mobile-menu-btn {
-            display: none;
-        }
-        
-        /* Dark mode adjustments for mobile */
-        @media (max-width: 768px) {
-            body.dark-mode .nav-links {
-                background-color: rgba(15, 23, 42, 0.95);
-                border-left: 1px solid rgba(255, 255, 255, 0.1);
-            }
-            
-            body.dark-mode .nav-link {
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            }
-            
-            body.dark-mode .mobile-menu-btn span {
-                background-color: #e2e8f0;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -168,7 +22,7 @@
             <div class="nav-content">
                 <a href="#" class="logo">My Dashboard</a>
                 
-                <div class="nav-links" id="navLinks">
+                <div class="nav-links">
                     <a href="#home" class="nav-link">Home</a>
                     <a href="#about" class="nav-link">About</a>
                     <a href="#skills" class="nav-link">Skills</a>
@@ -191,9 +45,6 @@
             </div>
         </div>
     </nav>
-    
-    <!-- Overlay for mobile menu -->
-    <div class="nav-overlay" id="navOverlay"></div>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -671,69 +522,5 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
-    
-    <script>
-        // Mobile Menu Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const navLinks = document.getElementById('navLinks');
-            const navOverlay = document.getElementById('navOverlay');
-            const navItems = document.querySelectorAll('.nav-link, .theme-toggle');
-            
-            // Toggle mobile menu
-            function toggleMobileMenu() {
-                mobileMenuBtn.classList.toggle('active');
-                navLinks.classList.toggle('active');
-                navOverlay.classList.toggle('active');
-                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-            }
-            
-            // Close mobile menu
-            function closeMobileMenu() {
-                mobileMenuBtn.classList.remove('active');
-                navLinks.classList.remove('active');
-                navOverlay.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-            
-            // Event listeners
-            mobileMenuBtn.addEventListener('click', toggleMobileMenu);
-            navOverlay.addEventListener('click', closeMobileMenu);
-            
-            // Close menu when clicking on nav items
-            navItems.forEach(item => {
-                item.addEventListener('click', () => {
-                    if (window.innerWidth <= 768) {
-                        closeMobileMenu();
-                    }
-                });
-            });
-            
-            // Close menu on window resize if desktop
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    closeMobileMenu();
-                }
-            });
-            
-            // Smooth scroll for nav links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
