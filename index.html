@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#07070f;--panel:#0d0d1c;--cyan:#00f0ff;--pink:#ff2bd6;--yellow:#fcee0a;--text:#e6e9ff;--muted:#8a8fb5;--line:#1d2040;--cut:14px}
+:root{--bg:#000;--panel:#07070f;--cyan:#00f0ff;--pink:#ff2bd6;--yellow:#fcee0a;--text:#e6e9ff;--muted:#8a8fb5;--line:#1d2040;--cut:14px}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Rajdhani',sans-serif;font-size:1.1rem;line-height:1.6;overflow-x:hidden}
@@ -21,7 +21,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:900;ba
 :focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
 
 /* NAV */
-.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(7,7,15,.75);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:transform .3s}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(0,0,0,.75);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:transform .3s}
 .navbar.hidden{transform:translateY(-100%)}
 .nav-content{display:flex;justify-content:space-between;align-items:center;height:68px}
 .logo{font-family:'Orbitron';font-weight:900;font-size:1.25rem;letter-spacing:.08em;color:var(--cyan);text-shadow:0 0 12px var(--cyan)}
@@ -44,10 +44,10 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:900;ba
  radial-gradient(circle at 80% 70%,rgba(0,240,255,.25),transparent 45%),
  linear-gradient(rgba(0,240,255,.07) 1px,transparent 1px) 0 0/48px 48px,
  linear-gradient(90deg,rgba(0,240,255,.07) 1px,transparent 1px) 0 0/48px 48px,var(--bg);
- background-image:url('project/bg.jpg'),radial-gradient(circle at 20% 30%,rgba(255,43,214,.28),transparent 45%),radial-gradient(circle at 80% 70%,rgba(0,240,255,.25),transparent 45%),linear-gradient(rgba(0,240,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,240,255,.07) 1px,transparent 1px);
+ background-image:url('assets/bg.jpg'),radial-gradient(circle at 20% 30%,rgba(255,43,214,.28),transparent 45%),radial-gradient(circle at 80% 70%,rgba(0,240,255,.25),transparent 45%),linear-gradient(rgba(0,240,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,240,255,.07) 1px,transparent 1px);
  background-size:cover,auto,auto,48px 48px,48px 48px;background-position:center}
 .hero-bg video{object-fit:cover;opacity:.55}
-.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(7,7,15,.55),var(--bg) 98%)}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.55),var(--bg) 98%)}
 #rain{opacity:.35;z-index:1}
 .hero .container{position:relative;z-index:2}
 .tag-line{color:var(--cyan);font-size:1rem;letter-spacing:.15em;margin-bottom:.8rem}
@@ -88,7 +88,7 @@ section{padding:6rem 0;position:relative}
 .reveal.on{opacity:1;transform:none}
 
 /* ABOUT */
-.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:start}
+.about-grid{display:grid;grid-template-columns:1fr minmax(300px,430px) 1fr;gap:2.5rem;align-items:center}
 .about-text p{color:var(--muted);margin-bottom:1.1rem}
 .about-text p strong{color:var(--cyan);font-weight:600}
 .about-text .lead{color:var(--text);font-size:1.3rem}
@@ -131,7 +131,7 @@ section{padding:6rem 0;position:relative}
 .pimg::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.03) 0 10px,transparent 10px 20px)}
 .pimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .card:hover .pimg img{transform:scale(1.08)}
-.pimg::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(7,7,15,.85))}
+.pimg::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.85))}
 .badge{position:absolute;top:12px;left:12px;z-index:2;font-family:'Share Tech Mono';font-size:.78rem;padding:.2rem .6rem;background:var(--pink);color:#fff}
 .badge.yt{background:#ff2b2b}.badge.tt{background:var(--cyan);color:#001014}.badge.web{background:var(--yellow);color:#111}
 .pbody{padding:1.3rem 1.4rem 1.5rem}
@@ -174,9 +174,9 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted)}
 .stage>*{grid-area:1/1}
 .ring{width:100px;height:100px;position:relative;transform-style:preserve-3d;animation:spin 26s linear infinite}
 @keyframes spin{to{transform:rotateY(360deg)}}
-.tile{position:absolute;inset:0;transform:rotateY(calc(var(--i)*45deg)) translateZ(195px);border-radius:24px;display:grid;place-items:center;font-family:'Orbitron';font-weight:900;font-size:1.5rem;color:#fff;background:var(--c);overflow:hidden;box-shadow:0 0 30px var(--c),inset 0 0 0 2px rgba(255,255,255,.35),inset 0 -16px 22px rgba(0,0,0,.35)}
+.tile{position:absolute;inset:0;transform:rotateY(calc(var(--i)*40deg)) translateZ(195px);border-radius:24px;display:grid;place-items:center;font-family:'Orbitron';font-weight:900;font-size:1.5rem;color:#fff;background:linear-gradient(145deg,color-mix(in srgb,var(--c) 40%,#000),#05050c);overflow:hidden;box-shadow:0 0 30px var(--c),inset 0 0 0 2px rgba(255,255,255,.35),inset 0 -16px 22px rgba(0,0,0,.35)}
 .tile::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.5),transparent 48%);z-index:2}
-.tile img{position:absolute;inset:14%;width:72%;height:72%;object-fit:contain}
+.tile img{position:absolute;inset:11% 11% 25%;width:78%;height:64%;object-fit:contain;filter:drop-shadow(0 4px 8px rgba(0,0,0,.6))}
 .tile small{position:absolute;bottom:6px;font:.6rem 'Share Tech Mono';z-index:3;opacity:.9}
 .tile.ok span{display:none}
 .cube{width:90px;height:90px;position:relative;transform-style:preserve-3d;animation:spin3 12s linear infinite}
@@ -219,10 +219,60 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted)}
  section{padding:4rem 0}
  .btn{width:100%;text-align:center}
 }
+
+#about{background:linear-gradient(180deg,#000 0,#06061a 10%,#000 30%,#000 70%,#06061a 90%,#000 100%)}
+.about-media{position:relative;aspect-ratio:3/4;background:#000;display:grid;place-items:center}
+.about-media video,.about-media .fb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;-webkit-mask-image:radial-gradient(ellipse 78% 82% at 50% 46%,#000 58%,transparent 100%);mask-image:radial-gradient(ellipse 78% 82% at 50% 46%,#000 58%,transparent 100%)}
+.avid{mix-blend-mode:screen;z-index:2}
+.aura{position:absolute;inset:-14%;background:radial-gradient(circle at 50% 55%,rgba(255,43,214,.38),rgba(0,240,255,.26) 42%,transparent 70%);filter:blur(34px);animation:aura 5s ease-in-out infinite}
+@keyframes aura{50%{transform:scale(1.12);opacity:.7}}
+.ringline{position:absolute;left:50%;top:50%;width:112%;aspect-ratio:1;border-radius:50%;border:2px solid transparent;border-top-color:var(--cyan);border-bottom-color:var(--pink);box-shadow:0 0 30px rgba(0,240,255,.25);animation:rspin 9s linear infinite}
+@keyframes rspin{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+.hud i{position:absolute;width:34px;height:34px;border:3px solid var(--cyan);filter:drop-shadow(0 0 6px var(--cyan));z-index:4}
+.hud i:nth-child(1){top:0;left:0;border-right:0;border-bottom:0}.hud i:nth-child(2){top:0;right:0;border-left:0;border-bottom:0}
+.hud i:nth-child(3){bottom:0;left:0;border-right:0;border-top:0}.hud i:nth-child(4){bottom:0;right:0;border-left:0;border-top:0}
+.scan{position:absolute;left:4%;right:4%;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);box-shadow:0 0 14px var(--cyan);z-index:4;animation:scanm 4s ease-in-out infinite}
+@keyframes scanm{0%,100%{top:6%;opacity:0}10%,90%{opacity:1}50%{top:94%}}
+.chip{position:absolute;z-index:5;padding:.25rem .7rem;font-size:.85rem;background:rgba(0,0,0,.7);border:1px solid var(--pink);color:var(--pink);box-shadow:0 0 14px rgba(255,43,214,.4);animation:fl 4s ease-in-out infinite}
+.chip.ca{top:10%;left:-12%}.chip.cb{bottom:16%;right:-12%;border-color:var(--cyan);color:var(--cyan);box-shadow:0 0 14px rgba(0,240,255,.4);animation-delay:-1.5s}
+.chip.cc{bottom:6%;left:-6%;border-color:var(--yellow);color:var(--yellow);box-shadow:0 0 14px rgba(252,238,10,.4);animation-delay:-3s}
+@keyframes fl{50%{transform:translateY(-12px)}}
+.stat{flex-direction:column;align-items:flex-start;gap:.3rem}
+.stat .n{font-size:2.2rem}
+.prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:1100;background:linear-gradient(90deg,var(--cyan),var(--pink));box-shadow:0 0 12px var(--cyan)}
+#gate{position:fixed;inset:0;z-index:2000;background:radial-gradient(circle at 50% 40%,#12082a,#000 70%);display:grid;place-items:center;text-align:center;padding:1.5rem;transition:opacity .8s,visibility .8s}
+#gate.out{opacity:0;visibility:hidden}
+.gbox .glitch{font-size:clamp(2.6rem,10vw,5rem);display:inline-block}
+.gbox .mono{color:var(--cyan);letter-spacing:.2em;margin:.8rem 0}
+.gbtn{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem}
+.mwrap{position:fixed;left:1rem;bottom:1rem;z-index:1500;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.vbox{display:flex;align-items:center;gap:.6rem;padding:.55rem .9rem;background:rgba(0,0,0,.8);border:1px solid var(--pink);color:var(--pink);font-size:.8rem;box-shadow:0 0 18px rgba(255,43,214,.3);backdrop-filter:blur(6px)}
+#vol{-webkit-appearance:none;appearance:none;width:110px;height:4px;background:linear-gradient(90deg,var(--cyan),var(--pink));outline:none;cursor:pointer}
+#vol::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;background:var(--yellow);box-shadow:0 0 10px var(--yellow);transform:rotate(45deg)}
+#vol::-moz-range-thumb{width:14px;height:14px;border:0;border-radius:0;background:var(--yellow);box-shadow:0 0 10px var(--yellow)}
+#vtxt{min-width:4ch;text-align:right}
+.music{display:flex;align-items:center;gap:.7rem;padding:.55rem 1rem;background:rgba(0,0,0,.8);color:var(--cyan);border:1px solid var(--cyan);cursor:pointer;font-size:.8rem;box-shadow:0 0 18px rgba(0,240,255,.3);backdrop-filter:blur(6px);clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px)}
+.eq{display:flex;gap:3px;align-items:flex-end;height:18px}
+.eq i{width:4px;height:5px;background:var(--pink);box-shadow:0 0 6px var(--pink)}
+.music.on .eq i{animation:eq .9s ease-in-out infinite}
+.music.on .eq i:nth-child(2){animation-delay:-.3s}.music.on .eq i:nth-child(3){animation-delay:-.6s}.music.on .eq i:nth-child(4){animation-delay:-.15s}
+@keyframes eq{50%{height:18px}}
+@media(max-width:1000px){.about-grid{grid-template-columns:1fr}.about-media{order:-1;max-width:360px;width:100%;margin:0 auto}.chip.ca{left:-4%}.chip.cb{right:-4%}.chip.cc{left:0}.stack{grid-template-columns:repeat(3,1fr)}.stat{padding:1rem}}
+@media(max-width:600px){.stack{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
+<audio id="bgm" src="assets/East_Duo_Chubina.mp3" loop preload="auto"></audio>
+<div class="prog" id="prog"></div>
+<div id="gate"><div class="gbox">
+ <p class="mono">&gt; BOOTING PORTFOLIO... [OK]</p>
+ <h2 class="glitch" data-text="EDRA.EXE">EDRA.EXE</h2>
+ <p class="mono">SOUND EXPERIENCE READY</p>
+ <div class="gbtn"><button class="btn btn-main" id="enterSound">MASUK + MUSIK</button><button class="btn btn-ghost" id="enterMute">TANPA MUSIK</button></div>
+</div></div>
+<div class="mwrap"><button class="music mono" id="music" aria-label="Putar atau jeda musik"><span class="eq"><i></i><i></i><i></i><i></i></span><span id="mtxt">MUSIC OFF</span></button>
+<div class="vbox mono"><span>VOL</span><input type="range" id="vol" min="0" max="100" value="50" aria-label="Volume"><span id="vtxt">50%</span></div></div>
 
 <nav class="navbar" id="navbar"><div class="container"><div class="nav-content">
  <a href="#home" class="logo">EDRA<b>.</b>EXE</a>
@@ -235,8 +285,8 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted)}
 <!-- HERO -->
 <section class="hero" id="home">
  <div class="hero-bg">
-  <!-- Ganti dengan video kamu: project/bg.mp4 (gambar cadangan: project/bg.jpg) -->
-  <video autoplay muted loop playsinline poster="project/bg.jpg"><source src="project/bg.mp4" type="video/mp4"></video>
+  <!-- Ganti dengan video kamu: assets/bg.mp4 (gambar cadangan: assets/bg.jpg) -->
+  <video autoplay muted loop playsinline poster="assets/bg.jpg"><source src="assets/bg.mp4" type="video/mp4"></video>
  </div>
  <canvas id="rain"></canvas>
  <div class="container">
@@ -264,6 +314,15 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted)}
    <p>Untuk <strong>editing video</strong>, saya mengolah footage jadi konten pendek yang rapi dan enak ditonton memakai <strong>CapCut, Alight Motion, dan KineMaster</strong>: dari transisi, efek, motion graphic, sampai sinkronisasi musik.</p>
    <p>Untuk <strong>editing foto</strong>, saya memakai <strong>Wink</strong> dan <strong>Lightroom</strong> untuk memperhalus detail, mengatur warna, dan membangun gaya visual yang konsisten.</p>
    <p>Di sisi <strong>web development</strong>, saya membuat website dan sistem sederhana yang responsif dan fungsional, dengan stack Laravel, React.js, dan MySQL.</p>
+  </div>
+  <div class="about-media reveal">
+   <div class="aura"></div><div class="ringline"></div>
+   <img class="fb" src="assets/profile.png" alt="Edra Dipa Hafidzi" onerror="this.remove()">
+   <!-- Taruh video animasi 4 detik kamu di: assets/videoku.mp4 (latar hitam #000) -->
+   <video class="avid" autoplay muted loop playsinline preload="auto" poster="assets/about.jpg" onloadeddata="document.querySelector('.fb')&&document.querySelector('.fb').remove()"><source src="assets/videoku.mp4" type="video/mp4"></video>
+   <div class="scan"></div>
+   <div class="hud"><i></i><i></i><i></i><i></i></div>
+   <div class="chip ca mono">&lt;EDITOR/&gt;</div><div class="chip cb mono">&lt;WEB DEV/&gt;</div><div class="chip cc mono">CAPCUT</div>
   </div>
   <div class="stack reveal">
    <div class="card stat"><div class="n" data-count="3">0</div><div class="l">Aplikasi editing video<br>CapCut, Alight Motion, KineMaster</div></div>
@@ -365,30 +424,30 @@ const SOFT=[
  ['🔥','Creativity','Ide segar untuk konten yang beda'],
  ['🔄','Consistency','Konsisten belajar dan berkarya']
 ];
-/* Gambar: taruh file di folder /project/ sesuai nama "img". Logo 3D: project/logos/<nama>.png */
+/* Semua file (gambar, video, logo, musik) ada di folder assets/ */
 const SOCIAL=[
- {b:'INSTAGRAM',t:'Personal Branding',d:'Akun personal branding: reels, foto, dan gaya visual yang konsisten.',tg:['CapCut','Lightroom','Wink'],img:'project/ig-personal.jpg',u:LINKS.instagram},
- {b:'INSTAGRAM',t:'Business Project',d:'Pengelolaan konten akun bisnis: feed, reels, dan story yang menarik.',tg:['Alight Motion','CapCut','Lightroom'],img:'project/ig-business.jpg',u:'#'},
- {b:'INSTAGRAM',t:'Landing Page Company',d:'Akun company profile dengan tampilan rapi dan profesional.',tg:['Lightroom','Wink','KineMaster'],img:'project/ig-company.jpg',u:'#'},
- {b:'YOUTUBE',k:'yt',t:'Langit Ilmu',d:'Channel YouTube berisi video edukasi dengan editing rapi dan mudah dipahami.',tg:['CapCut','KineMaster','Alight Motion'],img:'project/youtube.jpg',u:LINKS.youtube},
- {b:'TIKTOK',k:'tt',t:'@edragzwinzz',d:'Konten short-form entertainment dengan transisi, efek, dan sync musik.',tg:['CapCut','Alight Motion'],img:'project/tiktok.jpg',u:LINKS.tiktok}
+ {b:'INSTAGRAM',t:'Personal Branding',d:'Akun personal branding: reels, foto, dan gaya visual yang konsisten.',tg:['CapCut','Lightroom','Wink'],img:'assets/ig-personal.jpg',u:LINKS.instagram},
+ {b:'INSTAGRAM',t:'Business Project',d:'Pengelolaan konten akun bisnis: feed, reels, dan story yang menarik.',tg:['Alight Motion','CapCut','Lightroom'],img:'assets/ig-business.jpg',u:'#'},
+ {b:'INSTAGRAM',t:'Landing Page Company',d:'Akun company profile dengan tampilan rapi dan profesional.',tg:['Lightroom','Wink','KineMaster'],img:'assets/ig-company.jpg',u:'#'},
+ {b:'YOUTUBE',k:'yt',t:'Langit Ilmu',d:'Channel YouTube berisi video edukasi dengan editing rapi dan mudah dipahami.',tg:['CapCut','KineMaster','Alight Motion'],img:'assets/youtube.jpg',u:LINKS.youtube},
+ {b:'TIKTOK',k:'tt',t:'@edragzwinzz',d:'Konten short-form entertainment dengan transisi, efek, dan sync musik.',tg:['CapCut','Alight Motion'],img:'assets/tiktok.jpg',u:LINKS.tiktok}
 ];
 const EDIT=[
- {t:'Video Viral #1',v:'0 views',tg:['CapCut'],img:'project/edit-1.jpg',u:'#'},
- {t:'Video Viral #2',v:'0 views',tg:['Alight Motion'],img:'project/edit-2.jpg',u:'#'},
- {t:'Video Viral #3',v:'0 views',tg:['KineMaster'],img:'project/edit-3.jpg',u:'#'}
+ {t:'Video Viral #1',v:'0 views',tg:['CapCut'],img:'assets/edit-1.jpg',u:'#'},
+ {t:'Video Viral #2',v:'0 views',tg:['Alight Motion'],img:'assets/edit-2.jpg',u:'#'},
+ {t:'Video Viral #3',v:'0 views',tg:['KineMaster'],img:'assets/edit-3.jpg',u:'#'}
 ];
 const FEAT=[
- {t:'ScanBite',d:'Website yang sudah online dan bisa diakses publik. Edit deskripsi ini sesuai fungsi ScanBite.',tg:['Live','Domain .my.id'],img:'project/web-scanbite.png',u:'https://scanbite.my.id'},
- {t:'Zea Wisata Tour & Travel',d:'Website company profile tour dan travel yang sudah online dengan domain sendiri.',tg:['Live','Tour & Travel','Domain .com'],img:'project/web-zea.png',u:'https://zeawisatatourandtravel.com'}
+ {t:'ScanBite',d:'Website yang sudah online dan bisa diakses publik. Edit deskripsi ini sesuai fungsi ScanBite.',tg:['Live','Domain .my.id'],img:'assets/web-scanbite.png',u:'https://scanbite.my.id'},
+ {t:'Zea Wisata Tour & Travel',d:'Website company profile tour dan travel yang sudah online dengan domain sendiri.',tg:['Live','Tour & Travel','Domain .com'],img:'assets/web-zea.png',u:'https://zeawisatatourandtravel.com'}
 ];
 const WEB=[
- {b:'WEB',k:'web',t:'EdraHost',d:'Website jasa pembuatan website terjangkau agar bisnis tampil profesional secara digital.',tg:['Laravel','MySQL','React.js','GitHub'],img:'project/web-edrahost.png',u:'#'},
- {b:'WEB',k:'web',t:'Advertising & POS System',d:'Website iklan perusahaan lokal yang modern dan responsif, plus sistem POS untuk manajemen.',tg:['Laravel','MySQL','React.js','GitHub'],img:'project/web-pos.png',u:'#'},
- {b:'WEB',k:'web',t:'Edra Signature Hotel',d:'Website booking hotel modern dengan sistem manajemen data booking dan pembayaran.',tg:['Laravel','MySQL','React.js','Midtrans'],img:'project/web-hotel.png',u:'#'},
- {b:'WEB',k:'web',t:'Landing Page Portfolio',d:'Landing page portfolio pribadi dengan animasi halus, responsif di semua perangkat.',tg:['HTML','CSS','JavaScript'],img:'project/web-portfolio.png',u:'#'}
+ {b:'WEB',k:'web',t:'EdraHost',d:'Website jasa pembuatan website terjangkau agar bisnis tampil profesional secara digital.',tg:['Laravel','MySQL','React.js','GitHub'],img:'assets/web-edrahost.png',u:'#'},
+ {b:'WEB',k:'web',t:'Advertising & POS System',d:'Website iklan perusahaan lokal yang modern dan responsif, plus sistem POS untuk manajemen.',tg:['Laravel','MySQL','React.js','GitHub'],img:'assets/web-pos.png',u:'#'},
+ {b:'WEB',k:'web',t:'Edra Signature Hotel',d:'Website booking hotel modern dengan sistem manajemen data booking dan pembayaran.',tg:['Laravel','MySQL','React.js','Midtrans'],img:'assets/web-hotel.png',u:'#'},
+ {b:'WEB',k:'web',t:'Landing Page Portfolio',d:'Landing page portfolio pribadi dengan animasi halus, responsif di semua perangkat.',tg:['HTML','CSS','JavaScript'],img:'assets/web-portfolio.png',u:'#'}
 ];
-const TECH=[['CapCut','#15151c','CC','capcut'],['Alight Motion','#2a1b5e','AM','alight'],['KineMaster','#e5232b','KM','kinemaster'],['Laravel','#ff2d20','La','laravel'],['React','#0b3a4d','Re','react'],['MySQL','#00758f','My','mysql'],['Python','#3776ab','Py','python'],['PHP','#777bb4','php','php']];
+const TECH=[['CapCut','#e8e8f0','CC','capcut.png'],['Alight Motion','#7b3cff','AM','alightmotion.png'],['KineMaster','#e5232b','KM','kinemaster.png'],['Laravel','#ff2d20','La','laravel.webp'],['React','#61dafb','Re','react.webp'],['MySQL','#00a3c4','My','mysql.png'],['Python','#ffd43b','Py','python.webp'],['PHP','#777bb4','php','php.webp'],['Lightroom','#31a8ff','Lr','lightroom.webp']];
 const SERVICES=[
  ['🎬','Video Editing','Editing video pendek dan panjang: transisi, efek, motion, dan sinkronisasi musik untuk YouTube, TikTok, dan Reels.'],
  ['📸','Photo Editing','Retouch dan color grading foto dengan Lightroom dan Wink untuk hasil bersih dan konsisten.'],
@@ -421,7 +480,7 @@ $('#featGrid').innerHTML=FEAT.map(fcard).join('');
 $('#webGrid').innerHTML=WEB.map(card).join('');
 
 /* 3D logo ring + marquee */
-$('#ring').innerHTML=TECH.map((t,i)=>`<div class="tile" style="--i:${i};--c:${t[1]}"><img src="project/logos/${t[3]}.png" alt="${t[0]}" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"><span>${t[2]}</span><small>${t[0]}</small></div>`).join('');
+$('#ring').innerHTML=TECH.map((t,i)=>`<div class="tile" style="--i:${i};--c:${t[1]}"><img src="assets/${t[3]}" alt="${t[0]}" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"><span>${t[2]}</span><small>${t[0]}</small></div>`).join('');
 const mqItems=TECH.map(t=>`<span>${t[0].toUpperCase()}</span>`).concat(['<span>EDITOR</span>','<span>WEB DEVELOPER</span>']).join('<span>//</span>');
 $('#mq').innerHTML=mqItems+'<span>//</span>'+mqItems+'<span>//</span>';
 const stage=$('#stage'),glow=$('#glow');
@@ -443,7 +502,7 @@ addEventListener('mousemove',e=>{
  const chars='01アイウエオカキクケコサシスセソ<>/{}$#';
  function size(){w=c.width=c.offsetWidth;h=c.height=c.offsetHeight;cols=Math.floor(w/18);drops=Array(cols).fill(0).map(()=>Math.random()*-50)}
  size();addEventListener('resize',size);
- setInterval(()=>{x.fillStyle='rgba(7,7,15,.12)';x.fillRect(0,0,w,h);x.font='15px "Share Tech Mono"';
+ setInterval(()=>{x.fillStyle='rgba(0,0,0,.12)';x.fillRect(0,0,w,h);x.font='15px "Share Tech Mono"';
   drops.forEach((d,i)=>{x.fillStyle=Math.random()>.96?'#ff2bd6':'#00f0ff';x.fillText(chars[Math.floor(Math.random()*chars.length)],i*18,d*18);
    if(d*18>h&&Math.random()>.975)drops[i]=0;drops[i]++})},55);
 })();
@@ -470,6 +529,23 @@ $('#contactForm').addEventListener('submit',e=>{e.preventDefault();
  const v=id=>document.getElementById(id).value.trim();
  const msg=`Halo Edra, saya ${v('name')}!\n\n*Subjek:* ${v('subject')}\n*Email:* ${v('email')}\n\n*Pesan:*\n${v('message')}\n\n---\n*Dikirim lewat website Edra Dipa Hafidzi.*`;
  window.open('https://wa.me/6285198674763?text='+encodeURIComponent(msg),'_blank');e.target.reset()});
+
+/* ===== MUSIK + GATE ===== */
+const bgm=$('#bgm'),gate=$('#gate'),mbtn=$('#music'),volEl=$('#vol');let fadeT,vol=.5;
+try{const sv=localStorage.getItem('vol');if(sv!==null)vol=Math.min(1,Math.max(0,+sv))}catch(e){}
+volEl.value=Math.round(vol*100);$('#vtxt').textContent=Math.round(vol*100)+'%';
+bgm.volume=0;document.body.style.overflow='hidden';
+function fade(to){clearInterval(fadeT);fadeT=setInterval(()=>{const d=to-bgm.volume;
+ if(Math.abs(d)<.04){bgm.volume=to;clearInterval(fadeT);if(!to)bgm.pause();return}
+ bgm.volume=Math.min(1,Math.max(0,bgm.volume+Math.sign(d)*.03))},60)}
+function playM(){bgm.play().then(()=>{mbtn.classList.add('on');$('#mtxt').textContent='MUSIC ON';fade(vol)}).catch(()=>{})}
+function stopM(){mbtn.classList.remove('on');$('#mtxt').textContent='MUSIC OFF';fade(0)}
+function enter(snd){gate.classList.add('out');document.body.style.overflow='';scrollTo(0,0);if(snd)playM()}
+$('#enterSound').onclick=()=>enter(true);$('#enterMute').onclick=()=>enter(false);
+mbtn.onclick=()=>mbtn.classList.contains('on')?stopM():playM();
+volEl.addEventListener('input',()=>{vol=volEl.value/100;$('#vtxt').textContent=volEl.value+'%';try{localStorage.setItem('vol',vol)}catch(e){}
+ if(mbtn.classList.contains('on')){clearInterval(fadeT);bgm.volume=vol}});
+addEventListener('scroll',()=>{$('#prog').style.width=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100)+'%'});
 </script>
 </body>
 </html>
